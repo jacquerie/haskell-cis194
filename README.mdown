@@ -1,0 +1,13 @@
+# haskell-cis194 #
+
+WIP: This repository contains my solutions to the homework assignments of
+http://www.seas.upenn.edu/~cis194/, an Haskell course offered by the University
+of Pennsylvania.
+
+## Author ##
+
+Jacopo Notarstefano [(@Jaconotar)](https://twitter.com/Jaconotar)
+
+## License ##
+
+MIT
