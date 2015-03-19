@@ -1,2 +1,8 @@
+# Ignore CSS file
+css/style.css
+
+# Ignore HTML files
+**/*.html
+
 # Ignore homework pdfs
 **/*.pdf
