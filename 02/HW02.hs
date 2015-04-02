@@ -29,7 +29,8 @@ exactMatches xs ys = sum $ zipWith (\x y -> if x == y then 1 else 0) xs ys
 
 -- For each peg in xs, count how many times is occurs in ys
 countColors :: Code -> [Int]
-countColors = undefined
+countColors xs = map countColor colors
+  where countColor c = length $ filter (== c) xs
 
 -- Count number of matches between the actual code and the guess
 matches :: Code -> Code -> Int
