@@ -12,6 +12,7 @@ clean:
 	rm -f 07/07-monads.html 07/07-monads.pdf
 	rm -f 08/08-monads-ii.html
 	rm -f 09/09-testing.html
+	rm -f 10/10-gadts.html 10/10-gadts.pdf
 	rm -f css/style.css
 	rm -rf css
 
@@ -42,7 +43,10 @@ css/style.css: css
 07/07-monads.pdf:
 	curl -o $@ $(ROOT)/hw/07-monads.pdf
 
-homeworks: 01/01-intro.pdf 02/02-lists.pdf 03/03-ADTs.pdf 04/04-typeclasses.pdf 05/05-IO.pdf 06/06-laziness.pdf 07/07-monads.pdf
+10/10-gadts.pdf:
+	curl -o $@ $(ROOT)/hw/10-gadts.pdf
+
+homeworks: 01/01-intro.pdf 02/02-lists.pdf 03/03-ADTs.pdf 04/04-typeclasses.pdf 05/05-IO.pdf 06/06-laziness.pdf 07/07-monads.pdf 10/10-gadts.pdf
 
 01/01-intro.html:
 	curl -o $@ $(ROOT)/lectures/01-intro.html
@@ -71,6 +75,9 @@ homeworks: 01/01-intro.pdf 02/02-lists.pdf 03/03-ADTs.pdf 04/04-typeclasses.pdf 
 09/09-testing.html:
 	curl -o $@ $(ROOT)/lectures/09-testing.html
 
-lectures: css/style.css 01/01-intro.html 02/02-lists.html 03/03-ADTs.html 04/04-typeclasses.html 05/05-IO.html 06/06-laziness.html 07/07-monads.html 08/08-monads-ii.html 09/09-testing.html
+10/10-gadts.html:
+	curl -o $@ $(ROOT)/lectures/10-gadts.html
+
+lectures: css/style.css 01/01-intro.html 02/02-lists.html 03/03-ADTs.html 04/04-typeclasses.html 05/05-IO.html 06/06-laziness.html 07/07-monads.html 08/08-monads-ii.html 09/09-testing.html 10/10-gadts.html
 
 .PHONY: all homeworks lectures
