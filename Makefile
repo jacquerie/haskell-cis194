@@ -13,6 +13,9 @@ clean:
 	rm -f 08/08-monads-ii.html
 	rm -f 09/09-testing.html
 	rm -f 10/10-gadts.html 10/10-gadts.pdf
+	rm -f 11/11-stlc.html
+	rm -f 12/12-unsafe.html
+	rm -f 13/13-building.html
 	rm -f css/style.css
 	rm -rf css
 
@@ -78,6 +81,15 @@ homeworks: 01/01-intro.pdf 02/02-lists.pdf 03/03-ADTs.pdf 04/04-typeclasses.pdf 
 10/10-gadts.html:
 	curl -o $@ $(ROOT)/lectures/10-gadts.html
 
-lectures: css/style.css 01/01-intro.html 02/02-lists.html 03/03-ADTs.html 04/04-typeclasses.html 05/05-IO.html 06/06-laziness.html 07/07-monads.html 08/08-monads-ii.html 09/09-testing.html 10/10-gadts.html
+11/11-stlc.html:
+	curl -o $@ $(ROOT)/lectures/11-stlc.html
+
+12/12-unsafe.html:
+	curl -o $@ $(ROOT)/lectures/12-unsafe.html
+
+13/13-building.html:
+	curl -o $@ $(ROOT)/lectures/13-building.html
+
+lectures: css/style.css 01/01-intro.html 02/02-lists.html 03/03-ADTs.html 04/04-typeclasses.html 05/05-IO.html 06/06-laziness.html 07/07-monads.html 08/08-monads-ii.html 09/09-testing.html 10/10-gadts.html 11/11-stlc.html 12/12-unsafe.html 13/13-building.html
 
 .PHONY: all homeworks lectures
