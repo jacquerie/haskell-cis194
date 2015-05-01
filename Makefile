@@ -1,21 +1,20 @@
-ROOT="http://www.seas.upenn.edu/~cis194"
+ROOT=http://www.seas.upenn.edu/~cis194/spring13
 
 all: homeworks lectures
 
 clean:
 	rm -f 01/01-intro.html 01/01-intro.pdf
-	rm -f 02/02-lists.html 02/02-lists.pdf
-	rm -f 03/03-ADTs.html 03/03-ADTs.pdf
-	rm -f 04/04-typeclasses.html 04/04-typeclasses.pdf
-	rm -f 05/05-IO.html 05/05-IO.pdf
+	rm -f 02/02-ADTs.html 02/02-ADTs.pdf
+	rm -f 03/03-rec-poly.html 03/03-rec-poly.pdf
+	rm -f 04/04-higher-order.html 04/04-higher-order.pdf
+	rm -f 05/05-type-classes.html 05/05-type-classes.pdf
 	rm -f 06/06-laziness.html 06/06-laziness.pdf
-	rm -f 07/07-monads.html 07/07-monads.pdf
-	rm -f 08/08-monads-ii.html
-	rm -f 09/09-testing.html
-	rm -f 10/10-gadts.html 10/10-gadts.pdf
-	rm -f 11/11-stlc.html
-	rm -f 12/12-unsafe.html
-	rm -f 13/13-building.html
+	rm -f 07/07-folds-monoids.html 07/07-folds-monoids.pdf
+	rm -f 08/08-IO.html 08/08-IO.pdf
+	rm -f 09/09-functors.html 09/09-functors.pdf
+	rm -f 10/10-applicative.html 10/10-applicative.pdf
+	rm -f 11/11-applicative2.html 11/11-applicative2.pdf
+	rm -f 12/12-monads.html
 	rm -f css/style.css
 	rm -rf css
 
@@ -28,68 +27,77 @@ css/style.css: css
 01/01-intro.pdf:
 	curl -o $@ $(ROOT)/hw/01-intro.pdf
 
-02/02-lists.pdf:
-	curl -o $@ $(ROOT)/hw/02-lists.pdf
+02/02-ADTs.pdf:
+	curl -o $@ $(ROOT)/hw/02-ADTs.pdf
 
-03/03-ADTs.pdf:
-	curl -o $@ $(ROOT)/hw/03-ADTs.pdf
+03/03-rec-poly.pdf:
+	curl -o $@ $(ROOT)/hw/03-rec-poly.pdf
 
-04/04-typeclasses.pdf:
-	curl -o $@ $(ROOT)/hw/04-typeclasses.pdf
+04/04-higher-order.pdf:
+	curl -o $@ $(ROOT)/hw/04-higher-order.pdf
 
-05/05-IO.pdf:
-	curl -o $@ $(ROOT)/hw/05-IO.pdf
+05/05-type-classes.pdf:
+	curl -o $@ $(ROOT)/hw/05-type-classes.pdf
 
 06/06-laziness.pdf:
 	curl -o $@ $(ROOT)/hw/06-laziness.pdf
 
-07/07-monads.pdf:
-	curl -o $@ $(ROOT)/hw/07-monads.pdf
+07/07-folds-monoids.pdf:
+	curl -o $@ $(ROOT)/hw/07-folds-monoids.pdf
 
-10/10-gadts.pdf:
-	curl -o $@ $(ROOT)/hw/10-gadts.pdf
+08/08-IO.pdf:
+	curl -o $@ $(ROOT)/hw/08-IO.pdf
 
-homeworks: 01/01-intro.pdf 02/02-lists.pdf 03/03-ADTs.pdf 04/04-typeclasses.pdf 05/05-IO.pdf 06/06-laziness.pdf 07/07-monads.pdf 10/10-gadts.pdf
+09/09-functors.pdf:
+	curl -o $@ $(ROOT)/hw/09-functors.pdf
+
+10/10-applicative.pdf:
+	curl -o $@ $(ROOT)/hw/10-applicative.pdf
+
+11/11-applicative2.pdf:
+	curl -o $@ $(ROOT)/hw/11-applicative2.pdf
+
+12/12-monads.pdf:
+	curl -o $@ $(ROOT)/hw/12-monads.pdf
+
+homeworks: 01/01-intro.pdf 02/02-ADTs.pdf 03/03-rec-poly.pdf 04/04-higher-order.pdf 05/05-type-classes.pdf 06/06-laziness.pdf 07/07-folds-monoids.pdf 08/08-IO.pdf 09/09-functors.pdf 10/10-applicative.pdf 11/11-applicative2.pdf 12/12-monads.pdf
 
 01/01-intro.html:
 	curl -o $@ $(ROOT)/lectures/01-intro.html
 
-02/02-lists.html:
-	curl -o $@ $(ROOT)/lectures/02-lists.html
+02/02-ADTs.html:
+	curl -o $@ $(ROOT)/lectures/02-ADTs.html
 
-03/03-ADTs.html:
-	curl -o $@ $(ROOT)/lectures/03-ADTs.html
+03/03-rec-poly.html:
+	curl -o $@ $(ROOT)/lectures/03-rec-poly.html
 
-04/04-typeclasses.html:
-	curl -o $@ $(ROOT)/lectures/04-typeclasses.html
+04/04-higher-order.html:
+	curl -o $@ $(ROOT)/lectures/04-higher-order.html
 
-05/05-IO.html:
-	curl -o $@ $(ROOT)/lectures/05-IO.html
+05/05-type-classes.html:
+	curl -o $@ $(ROOT)/lectures/05-type-classes.html
 
 06/06-laziness.html:
 	curl -o $@ $(ROOT)/lectures/06-laziness.html
 
-07/07-monads.html:
-	curl -o $@ $(ROOT)/lectures/07-monads.html
+07/07-folds-monoids.html:
+	curl -o $@ $(ROOT)/lectures/07-folds-monoids.html
 
-08/08-monads-ii.html:
-	curl -o $@ $(ROOT)/lectures/08-monads-ii.html
+08/08-IO.html:
+	curl -o $@ $(ROOT)/lectures/08-IO.html
 
-09/09-testing.html:
-	curl -o $@ $(ROOT)/lectures/09-testing.html
+09/09-functors.html:
+	curl -o $@ $(ROOT)/lectures/09-functors.html
 
-10/10-gadts.html:
-	curl -o $@ $(ROOT)/lectures/10-gadts.html
+10/10-applicative.html:
+	curl -o $@ $(ROOT)/lectures/10-applicative.html
 
-11/11-stlc.html:
-	curl -o $@ $(ROOT)/lectures/11-stlc.html
+11/11-applicative2.html:
+	curl -o $@ $(ROOT)/lectures/11-applicative2.html
 
-12/12-unsafe.html:
-	curl -o $@ $(ROOT)/lectures/12-unsafe.html
+12/12-monads.html:
+	curl -o $@ $(ROOT)/lectures/12-monads.html
 
-13/13-building.html:
-	curl -o $@ $(ROOT)/lectures/13-building.html
-
-lectures: css/style.css 01/01-intro.html 02/02-lists.html 03/03-ADTs.html 04/04-typeclasses.html 05/05-IO.html 06/06-laziness.html 07/07-monads.html 08/08-monads-ii.html 09/09-testing.html 10/10-gadts.html 11/11-stlc.html 12/12-unsafe.html 13/13-building.html
+lectures: css/style.css 01/01-intro.html 02/02-ADTs.html 03/03-rec-poly.html 04/04-higher-order.html 05/05-type-classes.html 06/06-laziness.html 07/07-folds-monoids.html 08/08-IO.html 09/09-functors.html 10/10-applicative.html 11/11-applicative2.html 12/12-monads.html
 
 .PHONY: all homeworks lectures
