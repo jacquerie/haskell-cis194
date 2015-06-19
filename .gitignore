@@ -1,6 +1,10 @@
 # Ignore CSS file
 css/style.css
 
+# Ignore images
+images
+static
+
 # Ignore HTML files
 **/*.html
 

@@ -17,12 +17,20 @@ clean:
 	rm -f 12/12-monads.html
 	rm -f css/style.css
 	rm -rf css
+	rm -rf images
+	rm -rf static
 
 css:
 	mkdir css
 
 css/style.css: css
 	curl -o $@ $(ROOT)/$@
+
+images:
+	mkdir images
+
+static:
+	mkdir static
 
 01/01-intro.pdf:
 	curl -o $@ $(ROOT)/hw/01-intro.pdf
@@ -64,6 +72,11 @@ homeworks: 01/01-intro.pdf 02/02-ADTs.pdf 03/03-rec-poly.pdf 04/04-higher-order.
 
 01/01-intro.html:
 	curl -o $@ $(ROOT)/lectures/01-intro.html
+	curl -o images/haskell-logo-small.png $(ROOT)/images/haskell-logo-small.png
+	curl -o images/function-machine.png $(ROOT)/images/function-machine.png
+	curl -o images/pure.jpg $(ROOT)/images/pure.jpg
+	curl -o images/relax.jpg $(ROOT)/images/relax.jpg
+	curl -o images/static.jpg $(ROOT)/images/static.jpg
 
 02/02-ADTs.html:
 	curl -o $@ $(ROOT)/lectures/02-ADTs.html
@@ -79,12 +92,17 @@ homeworks: 01/01-intro.pdf 02/02-ADTs.pdf 03/03-rec-poly.pdf 04/04-higher-order.
 
 06/06-laziness.html:
 	curl -o $@ $(ROOT)/lectures/06-laziness.html
+	curl -o static/relax.jpg $(ROOT)/static/relax.jpg
 
 07/07-folds-monoids.html:
 	curl -o $@ $(ROOT)/lectures/07-folds-monoids.html
 
 08/08-IO.html:
 	curl -o $@ $(ROOT)/lectures/08-IO.html
+	curl -o static/cake.jpg $(ROOT)/static/cake.jpg
+	curl -o static/recipe.gif $(ROOT)/static/recipe.gif
+	curl -o static/fire.jpg $(ROOT)/static/fire.jpg
+	curl -o static/chef.jpg $(ROOT)/static/chef.jpg
 
 09/09-functors.html:
 	curl -o $@ $(ROOT)/lectures/09-functors.html
@@ -98,6 +116,6 @@ homeworks: 01/01-intro.pdf 02/02-ADTs.pdf 03/03-rec-poly.pdf 04/04-higher-order.
 12/12-monads.html:
 	curl -o $@ $(ROOT)/lectures/12-monads.html
 
-lectures: css/style.css 01/01-intro.html 02/02-ADTs.html 03/03-rec-poly.html 04/04-higher-order.html 05/05-type-classes.html 06/06-laziness.html 07/07-folds-monoids.html 08/08-IO.html 09/09-functors.html 10/10-applicative.html 11/11-applicative2.html 12/12-monads.html
+lectures: css/style.css images static 01/01-intro.html 02/02-ADTs.html 03/03-rec-poly.html 04/04-higher-order.html 05/05-type-classes.html 06/06-laziness.html 07/07-folds-monoids.html 08/08-IO.html 09/09-functors.html 10/10-applicative.html 11/11-applicative2.html 12/12-monads.html
 
 .PHONY: all homeworks lectures
