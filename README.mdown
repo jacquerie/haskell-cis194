@@ -1,6 +1,6 @@
 # haskell-cis194 #
 
-WIP: This repository contains my solutions to the homework assignments of
+WIP: This repository will contain my solutions to the homework assignments of
 http://www.seas.upenn.edu/~cis194/spring13, an Haskell course offered by the
 University of Pennsylvania.
 
